@@ -1,0 +1,5 @@
+notes.md
+*.swp
+model.o
+target
+target/*

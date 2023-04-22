@@ -1,0 +1,29 @@
+[package]
+name = "rinferer" # As in Rust, inferer. Original, I know.
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "rinferer"
+path = "src/lib/mod.rs"
+
+[[bin]]
+name = "rinferer"
+path = "src/bin/cli.rs"
+
+[build-dependencies]
+capnpc = "0.15"
+pyo3 = "0.18.0"
+
+[dependencies]
+dfdx = "0.10.0"
+capnp = "0.15"
+capnp-rpc = "0.15"
+tokio = {version = "1.25.0", features = ["net", "rt", "macros", "rt-multi-thread" ]}
+tokio-util = { version = "0.6.0", features = ["compat"]}
+futures = "0.3.26"
+warp = "0.3.3"
+serde = { version = "1.0.152", features = ["derive"] }
+serde_json = "1.0.91"

@@ -1,0 +1,11 @@
+[package]
+name = "loadtest"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+goose = "0.17"
+serde_json = "1.0.92"
+tokio = "^1.12"
